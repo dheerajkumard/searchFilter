@@ -1,0 +1,11 @@
+<div>
+    <button (click)="onGetUsers()">Get Users</button>
+</div>
+<div *ngIf="resp && resp.length">
+    <label>Search:
+        <input type="text" placeholder="search for name" [(ngModel)]="searchText" (input)="searchForName()">
+    </label>
+    <div *ngFor="let x of displayNames">
+        {{x.login }}
+    </div>
+</div>
